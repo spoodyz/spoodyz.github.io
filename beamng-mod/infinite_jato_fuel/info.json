@@ -1,0 +1,7 @@
+{
+  "title": "JATO Rocket Booster - Infinite Fuel",
+  "description": "Replaces the JATO rocket booster part with a version that has a giant fuel tank and zero fuel consumption by default. Includes a Lua controller that also refills the tank every frame so fuel can never run out.",
+  "authors": "spoody",
+  "version": "1.0.0",
+  "tags": ["jato", "rocket", "infinite fuel", "cheat"]
+}

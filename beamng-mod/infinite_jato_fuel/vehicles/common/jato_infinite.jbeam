@@ -1,0 +1,36 @@
+{
+"jato_infinite": {
+    "information":{
+        "authors":"spoody",
+        "name":"JATO Rocket Booster (Infinite Fuel)",
+        "value":0
+    },
+    "slotType":"jato",
+    "slots": [
+        ["type", "default", "description"]
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$jato_fuelUse", "range", "", "JATO", 0.0, 0.0, 10.0, "JATO Fuel Usage", "Fuel consumption multiplier. 0 = infinite fuel.", {"stepDis":0.1}],
+        ["$jato_thrust", "range", "N", "JATO", 30000, 1000, 120000, "JATO Thrust", "Peak thrust per booster.", {"stepDis":1000}]
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["fuelTank", "jato_tank"]
+    ],
+    "jato_tank": {
+        "fuelCapacity": 9999999,
+        "startingFuelCapacity": 9999999,
+        "fuelType": "rocketFuel"
+    },
+    "thrusters": [
+        ["name", "nodes:", "dir", "factor", "factorNode:", "maxRate", "thrustLimit", "fuelUse", "energyStorage"],
+        ["jato_thruster_l", ["jatoL1","jatoL2"], {"x":0,"y":-1,"z":0}, "$jato_thrust", "jatoL1", 50, "$jato_thrust", "$jato_fuelUse", "jato_tank"],
+        ["jato_thruster_r", ["jatoR1","jatoR2"], {"x":0,"y":-1,"z":0}, "$jato_thrust", "jatoR1", 50, "$jato_thrust", "$jato_fuelUse", "jato_tank"]
+    ],
+    "controller": [
+        ["fileName"],
+        ["jatoInfiniteController", {"name":"jato"}]
+    ]
+}
+}
