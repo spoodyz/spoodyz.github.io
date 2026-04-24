@@ -1,7 +1,7 @@
 {
   "title": "JATO Rocket Booster - Infinite Fuel",
-  "description": "Replaces the JATO rocket booster part with a version that has a giant fuel tank and zero fuel consumption by default. Includes a Lua controller that also refills the tank every frame so fuel can never run out.",
+  "description": "Auto-extension that runs on every spawned vehicle and keeps any JATO / rocket / thruster energy storage topped off every frame. No parts-menu changes required - just install the stock 'JATO Liquid Fuel Rockets' body accessory like normal and this mod makes it infinite.",
   "authors": "spoody",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "tags": ["jato", "rocket", "infinite fuel", "cheat"]
 }
